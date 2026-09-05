@@ -445,3 +445,39 @@ function nextQuestion() {
 
     document.getElementById("quizResult").innerHTML = "";
 }
+// ===============================
+// IPv4 CONVERTER
+// ===============================
+
+function convertIPv4() {
+
+    let input = document.getElementById("ipv4Input").value.trim();
+    let result = document.getElementById("ipv4Result");
+
+    let parts = input.split(".");
+
+    if (parts.length !== 4) {
+        result.innerHTML = "<p>❌ Invalid IPv4 address.</p>";
+        return;
+    }
+
+    let valid = parts.every(part =>
+        /^\d+$/.test(part) &&
+        Number(part) >= 0 &&
+        Number(part) <= 255
+    );
+
+    if (!valid) {
+        result.innerHTML = "<p>❌ Invalid IPv4 address.</p>";
+        return;
+    }
+
+    let binary = parts.map(part =>
+        Number(part).toString(2).padStart(8, "0")
+    ).join(".");
+
+    result.innerHTML =
+        "<h4>IPv4 Result</h4>" +
+        "<p><strong>IPv4:</strong> " + input + "</p>" +
+        "<p><strong>Binary:</strong> " + binary + "</p>";
+}
