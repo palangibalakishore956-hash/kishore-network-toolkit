@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishore Network Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌐 Kishore Network Toolkit</h1>
+        <p>Networking • Linux • Cybersecurity • CCNA</p>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>Welcome 👋</h2>
+            <p>
+                A simple toolkit for network engineers and cybersecurity learners.
+            </p>
+        </section>
+
+        <div class="tool">
+    <h3>📡 IP Calculator</h3>
+    <p>Calculate IPv4 network information.</p>
+
+    <input
+        type="text"
+        id="ipInput"
+        placeholder="192.168.1.10/24"
+    >
+
+    <button onclick="calculateIP()">Calculate</button>
+
+    <div id="ipResult"></div>
+</div>
+
+            <div class="tool">
+    <h3>🔢 Subnet Calculator</h3>
+    <p>Calculate subnet information.</p>
+
+    <input
+        type="text"
+        id="subnetInput"
+        placeholder="192.168.1.0/26"
+    >
+
+    <button onclick="calculateSubnet()">Calculate</button>
+
+    <div id="subnetResult"></div>
+</div>
+
+            <div class="tool">
+    <h3>🌍 DNS Lookup</h3>
+    <p>Look up DNS information for a domain.</p>
+
+    <input
+        type="text"
+        id="dnsInput"
+        placeholder="example.com"
+    >
+
+    <select id="dnsType">
+    <option value="A">A - IPv4</option>
+    <option value="AAAA">AAAA - IPv6</option>
+    <option value="MX">MX - Mail</option>
+    <option value="CNAME">CNAME - Alias</option>
+    <option value="NS">NS - Name Server</option>
+</select>
+
+    <button onclick="dnsLookup()">Lookup</button>
+
+    <div id="dnsResult"></div>
+</div>
+
+            <div class="tool">
+    <h3>🔌 Port Reference</h3>
+    <p>Find information about common TCP and UDP ports.</p>
+
+    <input type="text" id="portInput" placeholder="Enter port, example: 443">
+
+    <button onclick="lookupPort()">Lookup</button>
+
+    <div id="portResult"></div>
+</div>
+
+            <div class="tool">
+    <h3>🧠 OSI Model</h3>
+    <p>Learn the 7 layers of the OSI model.</p>
+
+    <select id="osiLayer">
+        <option value="">Select a layer</option>
+        <option value="7">Layer 7 - Application</option>
+        <option value="6">Layer 6 - Presentation</option>
+        <option value="5">Layer 5 - Session</option>
+        <option value="4">Layer 4 - Transport</option>
+        <option value="3">Layer 3 - Network</option>
+        <option value="2">Layer 2 - Data Link</option>
+        <option value="1">Layer 1 - Physical</option>
+    </select>
+
+    <button onclick="showOSI()">Learn</button>
+
+    <div id="osiResult"></div>
+</div>
+
+            <div class="tool">
+    <h3>🎯 CCNA Quiz</h3>
+    <p>Test your networking knowledge.</p>
+
+    <p><strong>Which protocol automatically assigns IP addresses?</strong></p>
+
+    <select id="quizAnswer">
+        <option value="">Select an answer</option>
+        <option value="DNS">A. DNS</option>
+        <option value="DHCP">B. DHCP</option>
+        <option value="HTTP">C. HTTP</option>
+        <option value="FTP">D. FTP</option>
+    </select>
+
+    <button onclick="checkQuiz()">Submit</button>
+
+    <div id="quizResult"></div>
+</div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Built by Kishore 🚀</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>
